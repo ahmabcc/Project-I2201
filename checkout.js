@@ -16,6 +16,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
         if (!cartList) return;
 
+        if (cart.length === 0) {
+            cartList.innerHTML = '<p>Your cart is empty.</p>';
+            summarySubtotal.textContent = '$0.00';
+            shippingCost.textContent = '$0.00';
+            orderTotal.textContent = '$0.00';
+            return;
+        }
+
         cartList.innerHTML = cart.map((item, index) => `
             <div class="cart-item">
                 <div class="cart-item-name">
@@ -51,6 +59,14 @@ document.addEventListener('DOMContentLoaded', () => {
         saveCart(cart);
         renderCartItems();
     }
+
+    document.querySelectorAll('.delete-item').forEach(button => {
+        button.addEventListener('click', (e) => {
+            const index = e.target.dataset.index;
+            deleteCartItem(index);
+        });
+    });
+
 
     renderCartItems();
 });
