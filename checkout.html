@@ -12,14 +12,14 @@
     </header>
 
     <nav class="nav">
-        <a href="index.html">Home</a>
-        <a href="aboutus.html">About Us</a>
-        <a href="products.html">Products</a>
-        <a href="contactus.html">Contact</a>
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#collections">Collections</a>
+        <a href="#contact">Contact</a>
     </nav>
 
     <p>YOUR SHOPPING BAG</p>
-    <img src="/images/check.png" alt="product" class="product-image">
+    <img src="images/check.png" alt="product" class="product-image">
 
     <div class="container">
         <div class="cart-section">
@@ -28,12 +28,11 @@
                 <span>Price</span>
                 <span>Qty</span>
                 <span>Subtotal</span>
-                <span>Action</span>
+                <span>Action <span>
+                <button class="delete-item" data-index="${index}">Delete</button>
+            
             </div>
             <div id="cart-list">
-                <div class="cart-item">
-                    <button class="delete-btn">Delete</button>
-                </div>
             </div>
         </div>
 
