@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="costyle.css">
+</head>
+<body>
+    <header class="header">
+        <h1>EGO FASHION SHOP</h1>
+    </header>
+
+    <nav class="nav">
+        <a href="index.html">Home</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="products.html">Products</a>
+        <a href="contactus.html">Contact</a>
+    </nav>
+
+    <p>YOUR SHOPPING BAG</p>
+    <img src="images/check.png" alt="product" class="product-image">
+
+    <div class="container">
+        <div class="cart-section">
+            <div class="cart-header">
+                <span>Item</span>
+                <span>Price</span>
+                <span>Qty</span>
+                <span>Subtotal</span>
+                <span>Action</span>
+            </div>
+            <div id="cart-list">
+                <div class="cart-item">
+                    <button class="delete-btn">Delete</button>
+                </div>
+            </div>
+        </div>
+
+        <div class="summary-section">
+            <h2>SUMMARY</h2>
+            <div class="summary-row">
+                <span>SUBTOTAL</span>
+                <span class="summary-subtotal">$0.00</span>
+            </div>
+            <div class="summary-row">
+                <span>SHIPPING</span>
+                <span class="shipping-cost">$0.00</span>
+            </div>
+            <div class="summary-row">
+                <span>ORDER TOTAL</span>
+                <span class="order-total">$0.00</span>
+            </div>
+            <div class="promo-section">
+                <h3>Apply Promo Code</h3>
+                <input type="text" placeholder="Enter Promo Code" class="promo-input">
+                <button class="apply-promo">APPLY PROMO CODE</button>
+                <button class="continue-btn" onclick="window.location.href='delivery.html'">CONTINUE</button>
+            </div>
+        </div>
+    </div>
+    <script src="checkout.js"></script>
+    <script src="products.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
